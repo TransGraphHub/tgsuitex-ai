@@ -1,9 +1,9 @@
-export const HeroSectionMainTitle = "Unify Your Market Intelligence. Empower Your Decisions."
-export const HeroSectionSubInfo = "TG SuiteX brings every source of market insight—internal research, external data, and supplier intelligence—into one centralized, cloud-based platform."
+export const HeroSectionMainTitle = "Unify Your Commodity Market Intelligence. Empower Your Decisions."
+export const HeroSectionSubInfo = "TG SuiteX brings every source of insights—internal research, external data, and supplier intelligence—into one centralized, cloud-based platform."
 
 export const KeyPointsTitle = "Unlock Clarity. Accelerate Decisions. Drive Growth."
 export const KeyPointsInfo = "TG SuiteX empowers global enterprises to turn fragmented market data into actionable intelligence—helping every team move faster, smarter, and with confidence."
-export const KeyPoint1 = "Unified Market Intelligence Platform – Access all internal and external data in one place."
+export const KeyPoint1 = "Unified Commodity Intelligence Platform – Access all internal and external data in one place."
 export const KeyPoint2 = "Faster Decision-Making – Enable global teams to act instantly with shared insights."
 export const KeyPoint3 = "Reduced Costs & Risk – Identify opportunities, optimize contracts, and manage volatility."
 export const KeyPoint4 = "Collaborative Intelligence – Break silos across procurement, trading, and finance."

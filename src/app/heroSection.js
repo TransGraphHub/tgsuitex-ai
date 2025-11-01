@@ -52,7 +52,7 @@ export default function HeroSection() {
                     <span className="text-[38px] lg:text-[58px] font-medium text-[#502170]">
                         {constants.HeroSectionMainTitle}
                     </span>
-                    <span className="text-[16px] mt-4 font-medium">
+                    <span className="text-[16px] mt-4 font-medium text-black">
                         {constants.HeroSectionSubInfo}
                     </span>
                     <div className="md:mt-[2.5rem] mt-[1.5rem] flex flex-row gap-x-10">
@@ -65,6 +65,60 @@ export default function HeroSection() {
                     </div>
                 </div>
                 <div className="lg:w-[10%]" />
+                {/* ui card */}
+                {/* <div className="my-10 lg:w-[30%]">
+                    <motion.div className="min-h-120 rounded-2xl flex flex-col p-5"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+                    >
+                        <div className="flex gap-y-4 flex-col">
+                            <div className="flex flex-row gap-x-4">
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Balance_Sheet.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Price_Analytics.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Forward_Curves.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Geo_Maps.png"} /></div>
+                            </div>
+                            <div className="flex flex-row gap-x-4">
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Price_Analytics.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Forward_Curves.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Balance_Sheet.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Geo_Maps.png"} /></div>
+                            </div>
+                            <div className="flex flex-row gap-x-4">
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Geo_Maps.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Balance_Sheet.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Forward_Curves.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Price_Analytics.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
+                            </div>
+                            <div className="flex flex-row gap-x-4">
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Price_Analytics.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Geo_Maps.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Balance_Sheet.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
+                            </div>
+                            <div className="flex flex-row gap-x-4">
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Geo_Maps.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Balance_Sheet.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Forward_Curves.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Price_Analytics.png"} /></div>
+                            </div>
+                            <div className="flex flex-row gap-x-4">
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Forward_Curves.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Balance_Sheet.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Price_Analytics.png"} /></div>
+                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Geo_Maps.png"} /></div>
+                            </div>
+                        </div>
+                        
+                    </motion.div>
+                </div> */}
             </div>
         </div>
 
