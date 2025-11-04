@@ -44,7 +44,7 @@ body {
   50% {
     transform: translateY(20px);
   }
-  100%{
+  100% {
     transform: translateY(0);
   }
 }
@@ -70,35 +70,36 @@ body {
   animation: rotate360 8s ease-in-out infinite;
 }
 .thoughts-btn {
-position: relative;
-display: inline-block;
-padding: 12px 28px;
-font-size: 1rem;
-font-family: 'Segoe UI', 'Nunito', sans-serif;
-font-weight: bold;
-letter-spacing: 0.04em;
-color: #fff;
-background: linear-gradient(90deg, #ff5f6d 0%, #ffc371 51%, #3fefb9 100%);
-border: none;
-border-radius: 2em;
-box-shadow: 0 2px 18px 0 rgba(255,95,109,0.17), 0 8px 32px 0 rgba(63,239,185,0.12);
-cursor: pointer;
-outline: none;
-overflow: hidden;
-transition: transform 0.22s cubic-bezier(.4,0,.2,1), box-shadow 0.22s;
+  position: relative;
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-family: "Segoe UI", "Nunito", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: linear-gradient(90deg, #ff5f6d 0%, #ffc371 51%, #3fefb9 100%);
+  border: none;
+  border-radius: 2em;
+  box-shadow: 0 2px 18px 0 rgba(255, 95, 109, 0.17),
+    0 8px 32px 0 rgba(63, 239, 185, 0.12);
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.22s;
 }
 
 .thoughts-btn::before {
-content: "";
-position: absolute;
-left: 50%;
-top: 50%;
-width: 0;
-height: 0;
-background: radial-gradient(circle, #ffc371 60%, #ff5f6d 100%);
-border-radius: 50%;
-transition: transform 0.3s ease-in;
-z-index: 1;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, #ffc371 60%, #ff5f6d 100%);
+  border-radius: 50%;
+  transition: transform 0.3s ease-in;
+  z-index: 1;
 }
 
 .thoughts-btn:hover {
@@ -111,7 +112,7 @@ z-index: 1;
   box-shadow: 0px 10px 20px rgb(228, 217, 217);
   border-radius: 16px;
   background: #ffffff;
-  transition: transform 0.3s ease ;
+  transition: transform 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,4 +121,30 @@ z-index: 1;
 .small-grid-box:hover {
   transform: scale(1.15);
   cursor: pointer;
+}
+
+.mobile-image-action {
+  position: absolute;
+  top: 40px;
+  right: -40px;
+  width: 1000px;
+  opacity: 0;
+  transform: translateX(20px); /* Starts slightly off to the right */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.mobile-image-action.show {
+  opacity: 1;
+  transform: translateX(0); /* Moves the image to its final position */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

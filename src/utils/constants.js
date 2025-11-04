@@ -1,4 +1,5 @@
-export const HeroSectionMainTitle = "Unify Your Commodity Market Intelligence. Empower Your Decisions."
+export const HeroSectionMainTitlePart1 = "Unify Commodity Market Intelligence."
+export const HeroSectionMainTitlePart2 = "Empower Decisions."
 export const HeroSectionSubInfo = "TG SuiteX brings every source of insights—internal research, external data, and supplier intelligence—into one centralized, cloud-based platform."
 
 export const KeyPointsTitle = "Unlock Clarity. Accelerate Decisions. Drive Growth."

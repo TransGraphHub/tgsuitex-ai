@@ -2,22 +2,28 @@
 
 // imports from packages
 import React from "react";
-import * as Yup from "yup";
 import Link from 'next/link';
-import toast from "react-hot-toast";
 import { Search } from 'lucide-react';
-import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
-import { Formik, Form, Field, ErrorMessage } from "formik";
 
 // imports from local
 import AnimatedButton from '@/components/AnimatedButton'
 import * as constants from "@/utils/constants";
 
 export default function HeroSection() {
+    const [isVisible, setIsVisible] = React.useState(false);
+
+    React.useEffect(() => {
+        // Set a 2-second delay before making the image visible
+        const timer = setTimeout(() => {
+            setIsVisible(true);
+        }, 600);
+
+        // Cleanup timeout on component unmount
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
-        <div className='bg-gradient-to-tr from-[#ded2fe] via-[#f7f5ff] to-[#d9f1ed] h-[75rem] md:h-[60rem] rounded-[48px] pt-5'>
+        <div className='bg-gradient-to-tr from-[#ded2fe] via-[#f7f5ff] to-[#d9f1ed] h-[45rem] md:h-[60rem] rounded-[48px] pt-5'>
 
             {/*header for mobile view */}
             <div className='h-20 block lg:hidden'>
@@ -45,12 +51,15 @@ export default function HeroSection() {
             </div>
 
             {/* main content and login ui */}
-            <div className='h-120 mt-10 lg:mt-28 py-10 px-10 flex flex-col lg:flex-row'>
+            <div className='h-120 mt-10 lg:mt-[3rem] py-10 px-10 flex flex-col lg:flex-row'>
 
                 {/* content */}
                 <div className="flex flex-col lg:w-[55%]">
+                    <span className="text-[38px] lg:text-[40px] w-[60%] font-medium text-[#502170]">
+                        {constants.HeroSectionMainTitlePart1}
+                    </span>
                     <span className="text-[38px] lg:text-[58px] font-medium text-[#502170]">
-                        {constants.HeroSectionMainTitle}
+                        {constants.HeroSectionMainTitlePart2}
                     </span>
                     <span className="text-[16px] mt-4 font-medium text-black">
                         {constants.HeroSectionSubInfo}
@@ -64,61 +73,18 @@ export default function HeroSection() {
                         />
                     </div>
                 </div>
-                <div className="lg:w-[10%]" />
-                {/* ui card */}
-                {/* <div className="my-10 lg:w-[30%]">
-                    <motion.div className="min-h-120 rounded-2xl flex flex-col p-5"
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-                    >
-                        <div className="flex gap-y-4 flex-col">
-                            <div className="flex flex-row gap-x-4">
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Balance_Sheet.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Price_Analytics.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Forward_Curves.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Geo_Maps.png"} /></div>
-                            </div>
-                            <div className="flex flex-row gap-x-4">
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Price_Analytics.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Forward_Curves.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Balance_Sheet.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Geo_Maps.png"} /></div>
-                            </div>
-                            <div className="flex flex-row gap-x-4">
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Geo_Maps.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Balance_Sheet.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Forward_Curves.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Price_Analytics.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
-                            </div>
-                            <div className="flex flex-row gap-x-4">
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Price_Analytics.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Geo_Maps.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Balance_Sheet.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
-                            </div>
-                            <div className="flex flex-row gap-x-4">
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Geo_Maps.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Balance_Sheet.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Forward_Curves.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Price_Analytics.png"} /></div>
-                            </div>
-                            <div className="flex flex-row gap-x-4">
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Forward_Curves.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Balance_Sheet.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Closing_Prices.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Price_Analytics.png"} /></div>
-                                <div className="small-grid-box shadow-2xl"><img className="h-10" src={"/priceImages/Geo_Maps.png"} /></div>
-                            </div>
-                        </div>
-                        
-                    </motion.div>
-                </div> */}
+                {/* right side images */}
+                <div className='hidden lg:block'>
+
+                    {/* background images */}
+                    <img className="absolute right-[8rem] top-[17rem]" src={"/shape/introThumbShape1_1.webp"} />
+                    <img className="absolute right-[12rem] top-[21rem]" src={"/shape/introThumbShape1_2.webp"} />
+
+                    {/* mobile images */}
+                    <div>
+                        <img src={"/assets/images/shape/Mobile_Right.png"} className={`mobile-image-action ${isVisible ? 'show' : ''}`}  />
+                    </div>
+                </div>
             </div>
         </div>
 
