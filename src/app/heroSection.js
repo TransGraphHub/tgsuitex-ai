@@ -77,8 +77,8 @@ export default function HeroSection() {
                 <div className='hidden lg:block'>
 
                     {/* background images */}
-                    <img className="absolute right-[8rem] top-[17rem]" src={"/shape/introThumbShape1_1.webp"} />
-                    <img className="absolute right-[12rem] top-[21rem]" src={"/shape/introThumbShape1_2.webp"} />
+                    <img className="absolute right-[4rem] top-[17rem]" src={"/shape/introThumbShape1_1.webp"} />
+                    <img className="absolute right-[8rem] top-[21rem]" src={"/shape/introThumbShape1_2.webp"} />
 
                     {/* mobile images */}
                     <div>
