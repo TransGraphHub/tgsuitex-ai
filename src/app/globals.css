@@ -126,7 +126,7 @@ body {
 .mobile-image-action {
   position: absolute;
   top: 40px;
-  right: -40px;
+  right: 0px;
   width: 1000px;
   opacity: 0;
   transform: translateX(20px); /* Starts slightly off to the right */
