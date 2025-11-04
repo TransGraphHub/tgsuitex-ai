@@ -10,32 +10,32 @@ const FooterPageLinks = [
     {
         id: 0,
         name: constants.FooterPageLink1,
-        route: ""
+        route: "https://www.transgraph.com/about-us/"
     },
     {
         id: 1,
         name: constants.FooterPageLink2,
-        route: ""
+        route: "https://www.transgraph.com/industries/"
     },
     {
         id: 2,
         name: constants.FooterPageLink3,
-        route: ""
+        route: "#"
     },
     {
         id: 3,
         name: constants.FooterPageLink4,
-        route: ""
+        route: "https://www.transgraph.com/life-at-transgraph/"
     },
     {
         id: 4,
         name: constants.FooterPageLink5,
-        route: ""
+        route: "#"
     },
     {
         id: 5,
         name: constants.FooterPageLink6,
-        route: ""
+        route: "https://www.transgraph.com/contact-us/"
     },
 ]
 
@@ -43,34 +43,38 @@ const UtilityPageLinks = [
     {
         id: 0,
         name: constants.FooterUtilityLink1,
-        route: ""
+        route: "https://www.transrisk.net/index.html"
     },
     {
         id: 1,
         name: constants.FooterUtilityLink2,
-        route: ""
+        route: "https://www.transgraph.com/price-consulting/"
     },
     {
         id: 2,
         name: constants.FooterUtilityLink3,
-        route: ""
+        route: "https://www.transgraph.com/price-risk-management/"
     },
     {
         id: 3,
         name: constants.FooterUtilityLink4,
-        route: ""
+        route: "https://www.transgraph.com/research-approach/"
     },
     {
         id: 4,
         name: constants.FooterUtilityLink5,
-        route: ""
-    },
-    {
-        id: 5,
-        name: constants.FooterUtilityLink6,
-        route: ""
+        route: "https://www.transgraph.com/business-consulting/"
     },
 ]
+
+// function for links redirection
+function handleRedirection(link) {
+    if (link === "/") {
+        window.location.href = link;
+    } else {
+        window.open(link, "_blank")
+    }
+}
 
 export default function Footer() {
     return (
@@ -109,7 +113,7 @@ export default function Footer() {
                     </button>
 
                     {/* pages */}
-                    <h1 className='text-3xl font-bold my-[5%]'>Pages</h1>
+                    <h1 className='text-3xl font-bold my-[5%]'>Explore More</h1>
                     <div className="border-1 w-[30%] border-[#502170]"></div>
 
                     {/* page links */}
@@ -120,7 +124,7 @@ export default function Footer() {
                     </div>
 
                     {/* utilities */}
-                    <h1 className='text-3xl font-bold my-[5%]'>Utility Pages</h1>
+                    <h1 className='text-3xl font-bold my-[5%]'>Offerings</h1>
                     <div className="border-1 w-[30%] border-[#502170]"></div>
 
                     {/* utilities links */}
@@ -183,25 +187,25 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-[15%] flex items-center flex-col gap-y-5">
 
-                            {/* pages and pages links */}
-                            <h1 className="text-3xl font-bold">Pages</h1>
-                            <div className="border-1 w-[30%] border-[#502170]"></div>
+                        {/* pages and pages links */}
+                        <div className="w-[15%] flex items-center flex-col gap-y-5">
+                            <h1 className="text-3xl font-bold">Explore More</h1>
+                            <div className="border-1 w-[50%] border-[#502170]"></div>
                             <div className="flex flex-col gap-y-7">
                                 {FooterPageLinks.map((link) => (
-                                    <p key={link.id} className="hover:text-[#5236ff] hover:cursor-pointer hover:translate-x-1 transition-all duration-500">{link.name}</p>
+                                    <p key={link.id} onClick={() => handleRedirection(link.route)} className="hover:text-[#5236ff] hover:cursor-pointer hover:translate-x-1 transition-all duration-500">{link.name}</p>
                                 ))}
                             </div>
                         </div>
 
                         {/* utility pages and links */}
                         <div className="w-[15%] flex items-center flex-col gap-y-5">
-                            <h1 className="text-3xl font-bold">Utility Pages</h1>
-                            <div className="border-1 w-[50%] border-[#502170]"></div>
+                            <h1 className="text-3xl font-bold">Offerings</h1>
+                            <div className="border-1 w-[40%] border-[#502170]"></div>
                             <div className="flex flex-col gap-y-7">
                                 {UtilityPageLinks.map((link) => (
-                                    <p key={link.id} className="hover:text-[#5236ff] hover:cursor-pointer hover:translate-x-1 transition-all duration-500">{link.name}</p>
+                                    <p key={link.id} onClick={() => handleRedirection(link.route)} className="hover:text-[#5236ff] hover:cursor-pointer hover:translate-x-1 transition-all duration-500">{link.name}</p>
                                 ))}
                             </div>
                         </div>
