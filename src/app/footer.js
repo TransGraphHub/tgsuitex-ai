@@ -76,6 +76,14 @@ function handleRedirection(link) {
     }
 }
 
+function handleAppStore() {
+    window.open('https://apps.apple.com/in/app/transgraph-commodity-mentors/id6738945246', "_blank")
+}
+
+function handlePlayStore() {
+    window.open('https://play.google.com/store/apps/details?id=com.transgraphapp', "_blank")
+}
+
 export default function Footer() {
     return (
         <div>
@@ -100,13 +108,15 @@ export default function Footer() {
 
                     {/* download app buttons */}
                     <button
-                        className={`my-[3%] w-[40%] relative overflow-hidden rounded-full px-6 py-3 text-lg bg-black font-semibold text-white hover:cursor-pointer`}>
+                        onClick={handleAppStore}
+                        className={`my-[3%] w-[50%] relative overflow-hidden rounded-full px-6 py-3 text-lg bg-black font-semibold text-white hover:cursor-pointer`}>
                         <span className="relative flex items-center gap-2">
                             <FaApple size={25} /> App Store
                         </span>
                     </button>
                     <button
-                        className={`my-[3%] w-[40%] relative overflow-hidden rounded-full px-6 py-3 text-lg font-semibold text-black hover:cursor-pointer border-1 border-[#d5d5d5]`}>
+                        onClick={handlePlayStore}
+                        className={`my-[3%] w-[50%] relative overflow-hidden rounded-full px-6 py-3 text-lg font-semibold text-black hover:cursor-pointer border-1 border-[#d5d5d5]`}>
                         <span className="relative flex items-center gap-2">
                             <FaAndroid size={25} /> Play Store
                         </span>
@@ -136,10 +146,10 @@ export default function Footer() {
 
                     {/* address card */}
                     <div className='h-[18rem] bg-[#f9f9f9] shadow-2xl rounded-2xl my-[5%] p-7 flex flex-col'>
-                        <p className="font-bold text-[#5236ff]">Address</p>
-                        <p className="font-bold text-[30px]">Ready to get Started?</p>
-                        <p className="font-bold text-[16px] text-[#8f8f8f] mt-[1%]">It is a long established fact that a reader will be distracted layout.</p>
-                        <div className='flex flex-row gap-x-3 mt-[5%]'>
+                        <p className="font-bold text-[#5236ff]"></p>
+                        <p className="font-bold text-[16px]">TransGraph Consulting Private Limited</p>
+                        <p className="font-bold text-[13px] text-[#8f8f8f] mt-[1%]">Unit No. 1206, 12th Floor, TOWER-1, Vasavi’s Sky City, Buddhimathi Knowledge Centre, Gachibowli, Hyderabad, Telangana, 500032</p>
+                        <div className='flex flex-row gap-x-3 mt-[7%]'>
                             <IoIosMail size={25} color="#5236ff" />
                             <p className="text-[#565656] hover:text-[#5236ff] hover:cursor-pointer">mktg@transgraph.com</p>
                         </div>
@@ -171,16 +181,16 @@ export default function Footer() {
                     <div className="h-[33rem] w-full flex flex-row pt-[6%]">
                         <div className="w-[30%] flex justify-start">
                             <div className="flex flex-col pl-5 pr-15">
-                                <img src={"/logos/TGBlack.png"} className="w-45 h-15" />
-                                <p className="mt-[3%]">{constants.FooterHead}</p>
+                                <img src={"/logos/TGBlack.png"} className="w-58 h-18" />
+                                <p className="mt-[1%]">{constants.FooterHead}</p>
                                 <div className="flex flex-row mt-[10%] gap-x-5">
-                                    <button className={`relative overflow-hidden rounded-full px-6 py-3 text-lg bg-black font-semibold text-white hover:cursor-pointer`}>
-                                        <span className="relative flex items-center gap-2">
+                                    <button onClick={handleAppStore} className={`relative overflow-hidden rounded-full px-6 py-3 text-lg bg-black font-semibold text-white hover:cursor-pointer`}>
+                                        <span className="relative flex items-center gap-2 hover:cursor-pointer">
                                             <FaApple size={25} /> App Store
                                         </span>
                                     </button>
-                                    <button className={`relative overflow-hidden rounded-full px-6 py-3 text-lg font-semibold text-black hover:cursor-pointer border-1 border-[#d5d5d5]`}>
-                                        <span className="relative flex items-center gap-2">
+                                    <button onClick={handlePlayStore} className={`relative overflow-hidden rounded-full px-6 py-3 text-lg font-semibold text-black hover:cursor-pointer border-1 border-[#d5d5d5]`}>
+                                        <span className="relative flex items-center gap-2 hover:cursor-pointer">
                                             <FaAndroid size={25} /> Play Store
                                         </span>
                                     </button>
@@ -213,16 +223,16 @@ export default function Footer() {
 
                             {/* address card */}
                             <div className="bg-white shadow-2xl rounded-2xl h-[25rem] p-12 flex flex-col gap-x-5 relative ">
-                                <p className="font-bold text-[#5236ff]">Address</p>
-                                <p className="font-bold text-[30px]">Ready to get Started?</p>
-                                <p className="font-bold text-[16px] text-[#797979] mt-[6%]">It is a long established fact that a reader will be distracted layout.</p>
+                                <p className="font-bold text-[#5236ff]"></p>
+                                <p className="font-bold text-[25px]">TransGraph Consulting Private Limited</p>
+                                <p className="font-bold text-[16px] text-[#797979] mt-[6%]">Unit No. 1206, 12th Floor, TOWER-1, Vasavi’s Sky City, Buddhimathi Knowledge Centre, Gachibowli, Hyderabad, Telangana, 500032</p>
                                 <div className="flex flex-row gap-x-3 mt-[10%]">
                                     <div>
                                         <IoIosMail size={25} color="#5236ff" />
                                     </div>
                                     <div>
                                         <p className="text-[#565656] hover:text-[#5236ff] hover:cursor-pointer">mktg@transgraph.com</p>
-                                        <p className="text-[#565656] hover:text-[#5236ff] hover:cursor-pointer">info@TransGraph.com</p>
+                                        <p className="text-[#565656] hover:text-[#5236ff] hover:cursor-pointer">info@transgraph.com</p>
                                     </div>
                                 </div>
                                 <div className="flex flex-row gap-x-3 mt-[10%]">

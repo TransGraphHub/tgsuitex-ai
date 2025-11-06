@@ -4,6 +4,8 @@
 import React from "react";
 import Link from 'next/link';
 import { Search } from 'lucide-react';
+import { FaArrowAltCircleRight } from "react-icons/fa";
+
 
 // imports from local
 import AnimatedButton from '@/components/AnimatedButton'
@@ -11,6 +13,17 @@ import * as constants from "@/utils/constants";
 
 export default function HeroSection() {
     const [isVisible, setIsVisible] = React.useState(false);
+
+    function handleContactUs() {
+        window.scrollTo({
+            top: (document.body.scrollHeight) - 300,
+            behavior: 'smooth',
+        });
+    }
+
+    function handleGoLive() {
+        window.open("https://live.tgsuitex.ai", "__blank_")
+    }
 
     React.useEffect(() => {
         // Set a 2-second delay before making the image visible
@@ -45,7 +58,7 @@ export default function HeroSection() {
                     <div className="w-[60%] h-15 flex justify-between items-center flex-row px-20"></div>
                     <div className="flex items-center space-x-10 w-[20%] h-15">
                         <Search className="text-gray-600 hover:cursor-pointer" size={24} />
-                        <AnimatedButton title={"Contact Us"} primaryColor="#7444fd" secondaryColor={"#262626"} textColor={"white"} />
+                        <AnimatedButton onClick={handleContactUs} title={"Contact Us"} primaryColor="#7444fd" secondaryColor={"#262626"} textColor={"white"} />
                     </div>
                 </div>
             </div>
@@ -54,24 +67,50 @@ export default function HeroSection() {
             <div className='h-120 mt-10 lg:mt-[3rem] py-10 px-10 flex flex-col lg:flex-row'>
 
                 {/* content */}
-                <div className="flex flex-col lg:w-[55%]">
-                    <span className="text-[38px] lg:text-[40px] w-[60%] font-medium text-[#502170]">
+                <div className="flex flex-col lg:w-[55%] mt-[1%]">
+                    <span className="text-[30px] lg:text-[50px] font-medium text-[#502170]">
                         {constants.HeroSectionMainTitlePart1}
                     </span>
                     <span className="text-[38px] lg:text-[58px] font-medium text-[#502170]">
                         {constants.HeroSectionMainTitlePart2}
                     </span>
-                    <span className="text-[16px] mt-4 font-medium text-black">
+                    <span className="text-[16px] mt-4 font-medium">
                         {constants.HeroSectionSubInfo}
                     </span>
                     <div className="md:mt-[2.5rem] mt-[1.5rem] flex flex-row gap-x-10">
-                        <AnimatedButton
+                        {/* <AnimatedButton
                             title={"Learn More"}
+                            primaryColor={"#7444fd"}
+                            secondaryColor={"#262626"}
+                            textColor={"white"}
+                        /> */}
+                        <AnimatedButton
+                            onClick={handleGoLive}
+                            title={"Live in Action"}
                             primaryColor={"#7444fd"}
                             secondaryColor={"#262626"}
                             textColor={"white"}
                         />
                     </div>
+                    <div className="hidden lg:block">
+                        <div className="mt-[5%] text-[27px] flex flex-row gap-x-10">
+                            <h1 className="flex flex-row items-center gap-x-4"><FaArrowAltCircleRight /> Centralize everything.</h1>
+                            <h1 className="flex flex-row items-center gap-x-4"><FaArrowAltCircleRight /> Empower decisions.</h1>
+                        </div>
+                        <div className="mt-[5%] text-[27px] flex flex-row gap-x-13">
+                            <h1 className="flex flex-row items-center gap-x-4"><FaArrowAltCircleRight /> Collaborate securely.</h1>
+                            <h1 className="flex flex-row items-center gap-x-4"><FaArrowAltCircleRight /> Scale globally.</h1>
+                        </div>
+                    </div>
+                    <div className="block lg:hidden">
+                        <div className="mt-[7%] text-[16px] flex flex-col gap-y-4">
+                            <h1 className="flex flex-row items-center gap-x-4"><FaArrowAltCircleRight /> Centralize everything.</h1>
+                            <h1 className="flex flex-row items-center gap-x-4"><FaArrowAltCircleRight /> Empower decisions.</h1>
+                            <h1 className="flex flex-row items-center gap-x-4"><FaArrowAltCircleRight /> Collaborate securely.</h1>
+                            <h1 className="flex flex-row items-center gap-x-4"><FaArrowAltCircleRight /> Scale globally.</h1>
+                        </div>
+                    </div>
+
                 </div>
                 {/* right side images */}
                 <div className='hidden lg:block'>
@@ -82,7 +121,7 @@ export default function HeroSection() {
 
                     {/* mobile images */}
                     <div>
-                        <img src={"/assets/images/shape/Mobile_Right.png"} className={`mobile-image-action ${isVisible ? 'show' : ''}`}  />
+                        <img src={"/assets/images/shape/Mobile_Right.png"} className={`mobile-image-action ${isVisible ? 'show' : ''}`} />
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import * as constants from "@/utils/constants";
 
 export default function StrengthPointsSection() {
     return (
@@ -9,35 +10,35 @@ export default function StrengthPointsSection() {
 
                 {/* title and info */}
                 <div className='flex justify-center items-center flex-col pt-8'>
-                    <h1 className='text-[28px] font-bold leading-[45px]'>Centralize. Analyze. Monetize.</h1>
-                    <p className='text-center text-[#858585] text-[14px]'>TG SuiteX simplifies how global enterprises manage intelligence—turning complex data into confident decisions.</p>
+                    <h1 className='text-[28px] font-bold leading-[45px] pl-5'>{constants.StrengthPointsTitle}</h1>
+                    <p className='pl-5 pt-3 text-[#858585] text-[14px]'>{constants.StrengthPointsContent}</p>
                 </div>
 
                 {/* key points */}
                 <div className='px-10 py-5 flex flex-col gap-y-5'>
                     <div className='flex flex-row items-center gap-x-3'>
                         <img className="h-5" src={"assets/images/shape/checkmarkIcon.svg"} />
-                        <p>One Source of Truth</p>
+                        <p>{constants.StrengthPoints1}</p>
                     </div>
                     <div className='flex flex-row items-center gap-x-3'>
                         <img className="h-5" src={"assets/images/shape/checkmarkIcon.svg"} />
-                        <p>Enhanced ROI on Data Subscriptions</p>
+                        <p>{constants.StrengthPoints2}</p>
                     </div>
                     <div className='flex flex-row items-center gap-x-3'>
                         <img className="h-5" src={"assets/images/shape/checkmarkIcon.svg"} />
-                        <p>Instant Collaboration</p>
+                        <p>{constants.StrengthPoints3}</p>
                     </div>
                     <div className='flex flex-row items-center gap-x-3'>
                         <img className="h-5" src={"assets/images/shape/checkmarkIcon.svg"} />
-                        <p>Analytics & Insights</p>
+                        <p>{constants.StrengthPoints4}</p>
                     </div>
                     <div className='flex flex-row items-center gap-x-3'>
                         <img className="h-5" src={"assets/images/shape/checkmarkIcon.svg"} />
-                        <p>Secure Cloud Access</p>
+                        <p>{constants.StrengthPoints5}</p>
                     </div>
                     <div className='flex flex-row items-center gap-x-3'>
                         <img className="h-5" src={"assets/images/shape/checkmarkIcon.svg"} />
-                        <p>Hosted on your Server</p>
+                        <p>{constants.StrengthPoints6}</p>
                     </div>
                 </div>
 
@@ -52,8 +53,8 @@ export default function StrengthPointsSection() {
 
                             {/* title and info */}
                             <div className="w-[80%] flex flex-col gap-y-3">
-                                <p className="text-[48px] font-bold leading-[55px]">Centralize. Analyze. Monetize.</p>
-                                <p className="text-[#858585]">TG SuiteX simplifies how global enterprises manage intelligence—turning complex data into confident decisions.</p>
+                                <p className="text-[48px] font-bold leading-[55px]">{constants.StrengthPointsTitle}</p>
+                                <p className="text-[#858585]">{constants.StrengthPointsContent}</p>
                             </div>
 
                             {/* key points */}
@@ -61,31 +62,31 @@ export default function StrengthPointsSection() {
                                 <div className='flex flex-row gap-x-10'>
                                     <div className='flex flex-row items-center gap-x-3'>
                                         <img className="h-8" src={"assets/images/shape/checkmarkIcon.svg"} />
-                                        <p>One Source of Truth</p>
+                                        <p>{constants.StrengthPoints1}</p>
                                     </div>
                                     <div className='flex flex-row items-center gap-x-3'>
                                         <img className="h-8" src={"assets/images/shape/checkmarkIcon.svg"} />
-                                        <p>Enhanced ROI on Data Subscriptions</p>
-                                    </div>
-                                </div>
-                                <div className='flex flex-row gap-x-8'>
-                                    <div className='flex flex-row items-center gap-x-3'>
-                                        <img className="h-8" src={"assets/images/shape/checkmarkIcon.svg"} />
-                                        <p>Instant Collaboration</p>
-                                    </div>
-                                    <div className='flex flex-row items-center gap-x-3'>
-                                        <img className="h-8" src={"assets/images/shape/checkmarkIcon.svg"} />
-                                        <p>Analytics & Insights</p>
+                                        <p>{constants.StrengthPoints2}</p>
                                     </div>
                                 </div>
                                 <div className='flex flex-row gap-x-8'>
                                     <div className='flex flex-row items-center gap-x-3'>
                                         <img className="h-8" src={"assets/images/shape/checkmarkIcon.svg"} />
-                                        <p>Secure Cloud Access</p>
+                                        <p>{constants.StrengthPoints3}</p>
                                     </div>
                                     <div className='flex flex-row items-center gap-x-3'>
                                         <img className="h-8" src={"assets/images/shape/checkmarkIcon.svg"} />
-                                        <p>Hosted on your Server</p>
+                                        <p>{constants.StrengthPoints4}</p>
+                                    </div>
+                                </div>
+                                <div className='flex flex-row gap-x-8'>
+                                    <div className='flex flex-row items-center gap-x-3'>
+                                        <img className="h-8" src={"assets/images/shape/checkmarkIcon.svg"} />
+                                        <p>{constants.StrengthPoints5}</p>
+                                    </div>
+                                    <div className='flex flex-row items-center gap-x-3'>
+                                        <img className="h-8" src={"assets/images/shape/checkmarkIcon.svg"} />
+                                        <p>{constants.StrengthPoints6}</p>
                                     </div>
                                 </div>
                             </div>

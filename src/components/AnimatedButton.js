@@ -1,16 +1,18 @@
 export default function AnimatedButton({
   title,
+  onClick,
   primaryColor,
   secondaryColor,
   textColor,
 }) {
   return (
     <button
+    onClick={onClick}
       className={`relative overflow-hidden rounded-full px-6 py-3 text-lg font-semibold text-white group hover:cursor-pointer`}
     >
       {/* Default gradient background */}
       <span
-        className={`absolute inset-0 bg-[#502170] transition-all duration-500 group-hover:opacity-0`}
+        className={`absolute inset-0 bg-[#032dca] transition-all duration-500 group-hover:opacity-0`}
       />
 
       {/* Black background — now with straight top */}

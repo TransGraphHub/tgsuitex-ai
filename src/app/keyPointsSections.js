@@ -1,5 +1,6 @@
 import React from 'react'
 import AnimatedButton from "@/components/AnimatedButton";
+
 import * as constants from "@/utils/constants";
 
 export default function KeyPointsSection() {
@@ -41,7 +42,7 @@ export default function KeyPointsSection() {
             {/* key points */}
             <div className='lg:w-[50%] h-full p-[20] lg:p-[10]'>
                 <div className="flex justify-center items-center h-full flex-col ml-5 gap-y-7">
-                    <p className="md:text-[48px] text-[35px] font-bold leading-[45px] lg:leading-[65px]">
+                    <p className="md:text-[50px] text-[35px] leading-[45px] lg:leading-[65px]">
                         {constants.KeyPointsTitle}
                     </p>
                     <p className="text-[16px] text-[#858585] pr-20">

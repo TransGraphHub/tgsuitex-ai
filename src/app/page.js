@@ -31,7 +31,7 @@ export default function Page() {
 
   return (
     <div className='bg-[#ffffff] mt-10'>
-
+      
       {/* login section */}
       <div className='px-[1%]'><HeroSection /></div>
 
