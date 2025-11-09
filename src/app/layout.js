@@ -25,13 +25,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={nunito.className}>
+    <html lang="en" className={`${nunito.className}`} style={{ colorScheme: "light" }}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
       >
         {children}
-
-        {/* scroll down icon */}
         <ScrollDownButtons />
       </body>
     </html>
