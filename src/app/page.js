@@ -28,6 +28,10 @@ export default function Page() {
     triggerOnce: true,
     delay: 0.5
   })
+  const { ref: ref5, inView: inView5 } = useInView({
+    triggerOnce: true,
+    delay: 0.5
+  })
 
   return (
     <div className='bg-[#ffffff] mt-10'>
@@ -45,14 +49,26 @@ export default function Page() {
         <KeyPointsSection />
       </motion.div>
 
+      {/* Private Cloud section */}
+      <motion.div
+        ref={ref2}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: inView2 ? 1 : 0, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+        className='px-[1%]'>
+        <div className='flex justify-center items-center'>
+          <img src={"/backgrounndImages/Tgsuitexsection3.png"} />
+        </div>
+      </motion.div>
+
       {/* problem solving section */}
       <div className='px-[1%]'><ProblemSolvingSection /></div>
 
       {/* steps to bring MMS section */}
       <motion.div
-        ref={ref2}
+        ref={ref3}
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: inView2 ? 1 : 0, y: 0 }}
+        animate={{ opacity: inView3 ? 1 : 0, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
         className='px-[1%]'>
         <StepsToBringTogetherSection />
@@ -60,9 +76,9 @@ export default function Page() {
 
       {/* strength points section */}
       <motion.div
-        ref={ref3}
+        ref={ref4}
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: inView3 ? 1 : 0, y: 0 }}
+        animate={{ opacity: inView4 ? 1 : 0, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
         className='px-[1%]'>
         <StrengthPointsSection />
@@ -70,9 +86,9 @@ export default function Page() {
 
       {/* footer */}
       <motion.div
-        ref={ref4}
+        ref={ref5}
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: inView4 ? 1 : 0, y: 0 }}
+        animate={{ opacity: inView5 ? 1 : 0, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}>
         <Footer />
       </motion.div>
